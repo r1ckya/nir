@@ -106,6 +106,7 @@ def main() -> None:
     parser.add_argument("--p_ij_cutoff", type=float, default=0.006)
     parser.add_argument("--p_j_cond_i_cutoff", type=float, default=0.15)
     parser.add_argument("--ratio_cutoff", type=float, default=0.0)
+    parser.add_argument("--c_ij_cutoff", type=int, default=0)
 
     parser.add_argument("--uncommon", action="store_true")
     parser.add_argument("--verbose", action="store_true")
@@ -139,6 +140,7 @@ def main() -> None:
             and p_ij > args.p_ij_cutoff
             and p_j_cond_i > args.p_j_cond_i_cutoff
             and ratio > args.ratio_cutoff
+            and c_ij > args.c_ij_cutoff
         ):
             info.append(
                 (

@@ -103,8 +103,15 @@ def show(info: List[Tuple], out_dir: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--out_dir", type=str, required=True)
-    parser.add_argument("--p_ij_cutoff", type=float, default=0.006)
-    parser.add_argument("--p_j_cond_i_cutoff", type=float, default=0.15)
+    parser.add_argument(
+        "--p_ij_cutoff", type=str, default="auto", help="auto or float(0.006)"
+    )
+    parser.add_argument(
+        "--p_j_cond_i_cutoff",
+        type=str,
+        default="auto",
+        help="auto or float(0.15)",
+    )
     parser.add_argument("--ratio_cutoff", type=float, default=0.0)
     parser.add_argument("--c_ij_cutoff", type=int, default=0)
 
@@ -118,7 +125,7 @@ def main() -> None:
     cnt_double, cnt_pos_double = get_counts_double(records)
 
     info = []
-
+    x = []
     for (i, j, aa_i, aa_j), c_ij in cnt_double.items():
 
         # if is_most_common(i, aa_i, cnt_single):
@@ -135,10 +142,27 @@ def main() -> None:
 
         ratio = p_ij / (p_i * p_j)
 
+        if args.p_ij_cutoff == "auto":
+            n_aa_i = n_aa_at_pos(i, cnt_single)
+            n_aa_j = n_aa_at_pos(j, cnt_single)
+            mean = (1 / n_aa_i) * (1 / n_aa_j)
+            std = (mean * (1 - mean) / cnt_pos_double[i, j]) ** 0.5
+            p_ij_cutoff = mean + 3 * std
+        else:
+            p_ij_cutoff = float(args.p_ij_cutoff)
+
+        if args.p_j_cond_i_cutoff == "auto":
+            n_aa_j = n_aa_at_pos(j, cnt_single)
+            mean = 1 / n_aa_j
+            std = (mean * (1 - mean) / c_i) ** 0.5
+            p_j_cond_i_cutoff = mean + 3 * std
+        else:
+            p_j_cond_i_cutoff = float(args.p_ij_cutoff)
+
         if (
             not (args.uncommon and is_most_common(j, aa_j, cnt_single))
-            and p_ij > args.p_ij_cutoff
-            and p_j_cond_i > args.p_j_cond_i_cutoff
+            and p_ij > p_ij_cutoff
+            and p_j_cond_i > p_j_cond_i_cutoff
             and ratio > args.ratio_cutoff
             and c_ij > args.c_ij_cutoff
         ):

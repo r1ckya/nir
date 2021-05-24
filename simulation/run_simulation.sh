@@ -19,8 +19,9 @@ echo "Data generated!"
 echo "Processing alignment..."
 python ../process_aln.py \
     --out_dir results \
-    --p_ij_cutoff 0 \
-    --p_j_cond_i_cutoff 0 \
+    --c_ij_cutoff 20 \
+    --p_ij_cutoff auto \
+    --p_j_cond_i_cutoff auto \
     < data.txt \
     > results.csv \
     2> /dev/null

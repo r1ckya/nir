@@ -48,11 +48,12 @@ echo "Aligned done!"
 echo "Processing alignment..."
 python process_aln.py \
     --out_dir "$result_dir" \
-    --c_ij_cutoff 10 \
-    --p_j_cond_i_cutoff 0 \
+    --c_ij_cutoff 20 \
+    --p_j_cond_i_cutoff auto \
+    --p_ij_cutoff auto \
     --uncommon \
     < "$alignment" \
-    > "$output"
+    > "$output" \
     2> /dev/null
 echo "Processing done!"
 

@@ -51,7 +51,7 @@ def is_most_common(
     return True
 
 
-def n_aa_at_pos(i: int, cnt_single: Dict[Tuple[int, str], int]):
+def n_aa_at_pos(i: int, cnt_single: Dict[Tuple[int, str], int]) -> int:
     res = set()
     for j, aa_j in cnt_single.keys():
         if j == i and aa_j != "-":
@@ -125,7 +125,7 @@ def main() -> None:
     cnt_double, cnt_pos_double = get_counts_double(records)
 
     info = []
-    x = []
+
     for (i, j, aa_i, aa_j), c_ij in cnt_double.items():
 
         # if is_most_common(i, aa_i, cnt_single):

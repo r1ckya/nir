@@ -115,7 +115,11 @@ def main() -> None:
     parser.add_argument("--ratio_cutoff", type=float, default=0.0)
     parser.add_argument("--c_ij_cutoff", type=int, default=0)
 
-    parser.add_argument("--uncommon", action="store_true")
+    parser.add_argument(
+        "--uncommon",
+        action="store_true",
+        help="discard dependent letters from result if it is most common at position",
+    )
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
 

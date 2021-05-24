@@ -17,7 +17,9 @@ do
 import sys;
 for i, s in enumerate(sys.stdin):
     if i % 2 == 1:
-        print(s[:$j] + \"^\" + s[$j:$i] + \"_\" + s[$i:], end='')
+        sys.stdout.write(s[:$j] + '_' + s[$j:$i] + '^' + s[$i:])
+    else:
+        sys.stdout.write(s)
 "
         else
             ndots=$((j - i - 1))
@@ -26,7 +28,9 @@ for i, s in enumerate(sys.stdin):
 import sys;
 for i, s in enumerate(sys.stdin):
     if i % 2 == 1:
-        print(s[:$i] + \"_\" + s[$i:$j] + \"^\" + s[$j:], end='')
+        sys.stdout.write(s[:$i] + '_' + s[$i:$j] + '^' + s[$j:])
+    else:
+        sys.stdout.write(s)
 "
 
     fi

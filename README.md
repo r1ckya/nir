@@ -97,7 +97,7 @@ bash extract_seqs.sh {pipeline_results.csv} {alignment_file}
 Example:
 
 ```[bash]
-bash extract_seqs.sh data/ratios.csv data/cdr1_clustalo.txt > data/extracted_seqs.txt
+bash extract_seqs.sh data/results.csv data/cdr1_clustalo.txt > data/extracted_seqs.txt
 ```
 
 Output format:

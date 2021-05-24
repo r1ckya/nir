@@ -1,52 +1,82 @@
 _ before codition position ^ before dependent position
 
-Position (5 L) depends on position (8 L) with p=0.74
---GYT^LTE_LS-
---GHT^LSE_LS-
---GYT^LTE_LP-
-
-Position (5 L) depends on position (7 E) with p=0.73
---GYT^LT_ELS-
---GHT^LS_ELS-
---GYT^LT_ELP-
-
-Position (9 S) depends on position (8 L) with p=0.70
---GYTLTE_L^S-
---GHTLSE_L^S-
---GTNLSE_L^S-
-
 Position (3 G) depends on position (6 R) with p=0.60
---G^GTF_RSHA-
---G^GNV_RSYD-
---G^GTF_RKYV-
-
-Position (3 G) depends on position (8 D) with p=0.58
---G^GTFSK_DA-
---G^GTFSK_DG-
---G^GTFSD_DT-
-
-Position (6 S) depends on position (8 D) with p=0.58
---GGNV^RS_YD-
---GYTF^TS_YD-
---GDAL^SS_DA-
-
-Position (9 S) depends on position (7 E) with p=0.58
---GYTLT_EL^S-
---GHTLS_EL^S-
---GTNLS_EL^S-
+>AB063755.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTF^RSHA-
+>AB063918.1|IGHV1-69*01 or IGHV1-69*12 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GNV^RSYD-
+>AB066946.1|IGHV1-69*04 or IGHV1-69*09|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTF^RKYV-
 
 Position (9 Y) depends on position (7 G) with p=0.57
+>AB063662.1|IGHV1-2*02|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
 --GYTFT_GY^Y-
+>AB063709.1|IGHV1-46*01 or IGHV1-46*03|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
 --GFTFT_GY^Y-
+>AB063919.1|IGHV1-2*02|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
 --GYTFI_GY^Y-
 
-Position (7 E) depends on position (8 L) with p=0.57
---GYTLT^E_LS-
---GHTLS^E_LS-
---GYTLT^E_LP-
-
 Position (3 G) depends on position (9 V) with p=0.54
---G^GTFSNY_V-
---G^GTFRKY_V-
---G^GTFSGH_V-
+>AB063763.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFSNY^V-
+>AB066946.1|IGHV1-69*04 or IGHV1-69*09|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFRKY^V-
+>AJ236542.1|IGHV1-69*01|Homo sapiens||CDR1-IMGT|79..102|24 nt|1||||8 AA|8+0=8||
+--G_GTFSGH^V-
+
+Position (6 S) depends on position (9 T) with p=0.53
+>AB067130.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--GGTF_SNY^T-
+>AF021952.1|IGHV1-69*02|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--GGTF_SSY^T-
+>AF103046.1|IGHV1-69*02|Homo sapiens||CDR1-IMGT|49..72|24 nt|1||||8 AA|8+0=8||
+--GGTF_STY^T-
+
+Position (3 G) depends on position (9 T) with p=0.51
+>AB067130.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFSNY^T-
+>AB067328.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFMKS^T-
+>AB067335.1|IGHV1-69*09|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFTTY^T-
+
+Position (3 G) depends on position (9 A) with p=0.51
+>AB063651.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFSTQ^A-
+>AB063666.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFSTY^A-
+>AB063701.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTFSSY^A-
+
+Position (6 S) depends on position (3 G) with p=0.51
+>AB063651.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTF^STQA-
+>AB063666.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTF^STYA-
+>AB063701.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTF^SSYA-
+
+Position (9 Y) depends on position (7 D) with p=0.47
+>AB063847.1|IGHV1-2*02|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--GYKFT_DY^Y-
+>AB066926.1|IGHV1-2*02|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--GYTFT_DS^Y-
+>AB067004.1|IGHV1-2*02|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--GYTFT_DY^Y-
+
+Position (3 G) depends on position (6 N) with p=0.41
+>AB063711.1|IGHV1-69*09|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTF^NSFG-
+>AB063864.1|IGHV1-69*04 or IGHV1-69*06 or IGHV1-69*09 or IGHV1-69*10 or IGHV1-69*11 or IGHV1-69*13 or IGHV1-69*14|Homo sapiens||CDR1-IMGT|76..99|24 nt|
+--G_GTF^NSYG-
+>AB066928.1|IGHV1-69*09|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_GTF^NSFA-
+
+Position (6 S) depends on position (3 D) with p=0.41
+>AB066934.1|IGHV1-69*01 or IGHV1-69D*01|Homo sapiens||CDR1-IMGT|76..99|24 nt|1||||8 AA|8+0=8||
+--G_DAL^SSDA-
+>AF103238.1|IGHV1-69*02|Homo sapiens||CDR1-IMGT|46..69|24 nt|1||||8 AA|8+0=8||
+--G_DTF^SKCT-
+>AF103264.1|IGHV1-18*01|Homo sapiens||CDR1-IMGT|56..79|24 nt|1||||8 AA|8+0=8||
+--G_YDF^TSYG-
 

@@ -123,8 +123,11 @@ def main() -> None:
     parser.add_argument("--n_seq", type=int, required=True)
     parser.add_argument("--n_pairs", type=int, required=True)
     parser.add_argument("--n_randoms", type=int, required=True)
+    parser.add_argument("--seed", type=int, default=42)
 
     args = parser.parse_args()
+
+    np.random.seed(args.seed)
 
     dependent = generate_sample(
         args.p_i_range, args.p_ji_range, args.n_seq, args.n_pairs

@@ -84,6 +84,31 @@ python process_aln.py \
 * `--uncommon` flag removes item from results if dependent letter is most common at it's position
 * `--*_cutoff` params are cutoffs for different values, some cutoffs can be set to `auto`, `auto` means that cutoff will be calculated dynamically using normal distribution assumption and 3-sigma rule
 
+## `delta_simulation.py`
+
+Runs simulation with different `p_ji` values
+
+Usage:
+
+* `--n_trials` number of runs per `p_ji` value
+* `--p_ji_range` min/max values of `p_ji`
+* `--num_steps` number `p_ji` points from `p_ji_range`
+* `--n_proc` number of processes
+
+```[bash]
+python delta_simulation.py \
+    --p_i_range 0.04 0.1 \
+    --n_trials 3 \
+    --n_seq 1000 \
+    --n_pairs 3 \
+    --n_randoms 2 \
+    --seed 7 \
+    --p_ji_range 0.05 1 \
+    --num_steps 77 \
+    --n_proc 4 \
+    > delta_results/delta_results.csv
+```
+
 ## `extract_seqs.sh`
 
 Extracts some seqs with highly dependent positions

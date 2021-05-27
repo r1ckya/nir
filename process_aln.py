@@ -62,6 +62,7 @@ def n_aa_at_pos(i: int, cnt_single: Dict[Tuple[int, str], int]) -> int:
 def show(info: List[Tuple], out_dir: str) -> None:
     ratios = list(map(lambda x: x[1], info))
     conds = list(map(lambda x: x[0], info))
+    c_ij = list(map(lambda x: x[-1], info))
 
     plt.scatter(ratios, conds)
     plt.xlabel("ratio")
@@ -69,9 +70,14 @@ def show(info: List[Tuple], out_dir: str) -> None:
     plt.savefig(join(out_dir, "scatter.png"))
     plt.close()
 
-    plt.hist(ratios)
+    plt.hist(ratios, bins=100)
     plt.title("ratios hist")
     plt.savefig(join(out_dir, "ratios_hist.png"))
+    plt.close()
+
+    plt.hist(c_ij, bins=100)
+    plt.title("c_ij hist")
+    plt.savefig(join(out_dir, "c_ij_hist.png"))
     plt.close()
 
     plt.hist(conds, bins=100)
@@ -131,9 +137,6 @@ def main() -> None:
     info = []
 
     for (i, j, aa_i, aa_j), c_ij in cnt_double.items():
-
-        # if is_most_common(i, aa_i, cnt_single):
-        #     continue
 
         c_i = cnt_single[(i, aa_i)]
         c_j = cnt_single[(j, aa_j)]

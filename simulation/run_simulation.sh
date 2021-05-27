@@ -9,7 +9,7 @@ echo "Generation data..."
 python simulate.py \
     --p_i_range 0.04 0.07 \
     --p_ji_range 0.4 0.6 \
-    --n_seq 5000 \
+    --n_seq 1000 \
     --n_pairs 3 \
     --n_randoms 2 \
     > data.txt \
@@ -19,7 +19,7 @@ echo "Data generated!"
 echo "Processing alignment..."
 python ../process_aln.py \
     --out_dir results \
-    --c_ij_cutoff 20 \
+    --c_ij_cutoff 10 \
     --p_ij_cutoff auto \
     --p_j_cond_i_cutoff auto \
     < data.txt \

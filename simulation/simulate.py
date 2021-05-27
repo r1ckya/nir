@@ -65,17 +65,6 @@ def generate_pairs(
     # random shuffle to prevent dependency on different pair
     res = [x + y for x, y in zip(pos1, pos2)]
     np.random.shuffle(res)
-    cnt = 0
-    for s in res:
-        if s == aa_i.name + aa_j.name:
-            cnt += 1
-
-    print(cnt, file=sys.stderr)
-    print(n_aa_i / n_seq, file=sys.stderr)
-    print(n_aa_ji / n_seq, file=sys.stderr)
-    print(n_aa_ji / n_aa_i, file=sys.stderr)
-    print(aa_i.name, aa_j.name, file=sys.stderr)
-    print(file=sys.stderr)
 
     return res
 

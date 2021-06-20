@@ -53,7 +53,7 @@ def get_acc(res_file, n_dep_pos):
                 else:
                     n_drop += 1
             n_rows += 1
-        return n_dep_pos / (n_rows - n_drop)
+        return 0 if n_rows == n_drop else n_dep_pos / (n_rows - n_drop)
 
 
 def run(
@@ -85,8 +85,8 @@ def run(
         f"""python ../process_aln.py \
             --out_dir /tmp \
             --c_ij_cutoff 0 \
-            --p_ij_cutoff 0 \
-            --p_j_cond_i_cutoff 0 \
+            --p_ij_cutoff auto \
+            --p_j_cond_i_cutoff auto \
             < {data_file} \
             > {res_file} \
             2> /dev/null
